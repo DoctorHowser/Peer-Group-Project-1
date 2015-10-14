@@ -15,45 +15,38 @@ for (var i = 0; i < employees.length; i++) {
 	bonus(employees[i], bonusEmployees[i]);
 }
 
-//function findPerson(name){
-//	bonus("array"+name, "bonus"+name);
-//}
-
-//findPerson("Atticus");
 console.log(bonusAtticus);
 console.log(bonusJem);
 console.log(bonusBoo);
 console.log(bonusScout);
 
-//bonus(arrayAtticus, bonusAtticus);
-//console.log(bonusAtticus);
 
 function bonus (arrayName, arrayTarget) {
 	arrayTarget[0]= arrayName[0];
 
-	var sti = 0
+	var sti = 0;
 	switch (arrayName[3]) {
 		case 2:
 			sti = 0;
 			break;
 		case 3:
-			sti = .04;
+			sti = 0.04;
 			break;
 		case 4:
-			sti = .06;
+			sti = 0.06;
 			break;
 		case 5:
-			sti = .10;
+			sti = 0.10;
 			break;
 	}
 	if (arrayName[1].length == 4) {
-		sti += .05;
+		sti += 0.05;
 	}
 	if (arrayName[2] >65000) {
-		sti -= .01;
+		sti -= 0.01;
 	}
-	if (sti > .13){
-		sti = .13;
+	if (sti > 0.13){
+		sti = 0.13;
 	}
 	arrayTarget[1] = sti;
 
