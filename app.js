@@ -8,12 +8,23 @@ var bonusJem = [];
 var bonusBoo = [];
 var bonusScout = [];
 
-function findPerson(name){
-	bonus("array"+name, "bonus"+name);
+var employees = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
+var bonusEmployees = [bonusAtticus, bonusJem, bonusBoo, bonusScout];
+
+for (var i = 0; i < employees.length; i++) {
+	bonus(employees[i], bonusEmployees[i]);
 }
 
-findPerson("Atticus");
+//function findPerson(name){
+//	bonus("array"+name, "bonus"+name);
+//}
+
+//findPerson("Atticus");
 console.log(bonusAtticus);
+console.log(bonusJem);
+console.log(bonusBoo);
+console.log(bonusScout);
+
 //bonus(arrayAtticus, bonusAtticus);
 //console.log(bonusAtticus);
 
@@ -35,7 +46,7 @@ function bonus (arrayName, arrayTarget) {
 			sti = .10;
 			break;
 	}
-	if (arrayName[1].length =4) {
+	if (arrayName[1].length == 4) {
 		sti += .05;
 	}
 	if (arrayName[2] >65000) {
@@ -52,14 +63,14 @@ function bonus (arrayName, arrayTarget) {
 	function getStiDollar() {
 		 stiDollar = sti * parseInt(arrayName[2]);
 		 return;
-	};
+	}
 
 	getStiDollar();
 
 	function getFinalIncome() {
 		 finalIncome = stiDollar + parseInt(arrayName[2]);
 		 return;
-	};
+	}
 
 	getFinalIncome();
 
