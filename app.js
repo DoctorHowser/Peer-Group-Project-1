@@ -62,6 +62,7 @@ function bonus (arrayName, arrayTarget) {
 
 	function getFinalIncome() {
 		 finalIncome = stiDollar + parseInt(arrayName[2]);
+		 finalIncome = Math.round(finalIncome);
 		 return;
 	}
 
